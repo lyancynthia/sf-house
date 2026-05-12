@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'FAQ | SF Affordable Short Term Rentals',
+  title: 'FAQ',
   description:
     'Frequently asked questions about renting a private room in San Francisco. Covers pricing ($1,350-$1,850/mo), deposits, move-in process, amenities, payment methods, and cancellation policy.',
   keywords: [

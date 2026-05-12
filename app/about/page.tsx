@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About Cynthia | SF Affordable Short Term Rentals',
+  title: 'About Cynthia',
   description:
     'Learn about Cynthia Luo, founder of SF Affordable Short Term Rentals. Former community housing manager helping newcomers and early-career professionals find affordable monthly housing in San Francisco.',
   keywords: [
