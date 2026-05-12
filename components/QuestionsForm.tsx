@@ -83,15 +83,6 @@ export default function QuestionsForm() {
               </div>
               <h3 className="text-xl font-heading text-gray-900 mb-2">Question Received!</h3>
               <p className="text-gray-500">I'll reply within 24 hours. Thank you!</p>
-              {/* CRITICAL REMINDER */}
-              <div className="bg-red-50 border-2 border-red-400 rounded-xl p-4 my-6 text-left">
-                <p className="text-red-700 text-sm font-bold text-center leading-relaxed">
-                  ⚠️ IMPORTANT: PLEASE also text Cynthia at{' '}
-                  <a href="sms:+14152839224" className="underline">+1 (415) 283-9224</a>{' '}
-                  to confirm!<br />
-                  In case my automated system glitches 🙏
-                </p>
-              </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">

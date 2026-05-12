@@ -324,16 +324,6 @@ export default function BookingForm() {
                 We'll send you a lease and contact you within 24 hours.
               </p>
 
-              {/* IMPORTANT REMINDER */}
-              <div className="bg-red-50 border-2 border-red-400 rounded-xl p-4 mb-6">
-                <p className="text-red-700 text-sm font-bold text-center leading-relaxed">
-                  ⚠️ IMPORTANT: After submitting, PLEASE also text/call Cynthia at{' '}
-                  <a href="sms:+14152839224" className="underline">+1 (415) 283-9224</a>{' '}
-                  to confirm!<br />
-                  In case my automated system glitches and I can't see your submission 🙏
-                </p>
-              </div>
-
               <div className="bg-gray-50 rounded-xl p-5 space-y-3 mb-6">
                 <div className="flex justify-between">
                   <span className="text-gray-500">Room</span>
@@ -393,15 +383,9 @@ export default function BookingForm() {
               <p className="text-gray-500 text-sm mb-2">
                 Our team will contact you within 24 hours.
               </p>
-              {/* CRITICAL REMINDER */}
-              <div className="bg-red-50 border-2 border-red-400 rounded-xl p-4 my-6 text-left">
-                <p className="text-red-700 text-sm font-bold text-center leading-relaxed">
-                  ⚠️ IMPORTANT: PLEASE also text Cynthia at{' '}
-                  <a href="sms:+14152839224" className="underline">+1 (415) 283-9224</a>{' '}
-                  to confirm your submission!<br />
-                  In case my automated system glitches 🙏
-                </p>
-              </div>
+              <p className="text-gray-400 text-sm mb-6">
+                
+              </p>
               {result.leaseUrl && (
                 <a
                   href={result.leaseUrl}

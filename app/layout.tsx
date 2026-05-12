@@ -17,6 +17,15 @@ export const metadata: Metadata = {
     'sf monthly sublease',
     'short stay san francisco',
     'affordable short term rent sf',
+    'private room san francisco hotel',
+    'new grad housing sf',
+    'sf monthly hotel',
+    'san francisco cheap housing',
+    'short term lease san francisco',
+    'sf furnished room monthly',
+    'hotel sublet san francisco',
+    'powell bart housing sf',
+    'tenderloin sf monthly rental',
   ],
   openGraph: {
     title: 'SF Affordable Short Term Rentals | San Francisco Hotel Sublease',
@@ -56,6 +65,43 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased bg-background text-foreground">
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'RealEstateAgent',
+              name: 'SF Affordable Short Term Rentals',
+              description:
+                'Fully furnished private rooms in San Francisco hotels for monthly sublease. Starting at $1,350/mo, 4 min walk to Powell BART.',
+              url: 'https://sf-affordable-rentals.vercel.app',
+              telephone: '+1-415-283-9224',
+              email: 'cynthiayluo11@gmail.com',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'San Francisco',
+                addressRegion: 'CA',
+                postalCode: '94105',
+                addressCountry: 'US',
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: 37.7855,
+                longitude: -122.4085,
+              },
+              priceRange: '$$',
+              openingHoursSpecification: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: [
+                  'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
+                  'Saturday', 'Sunday',
+                ],
+                opens: '09:00',
+                closes: '21:00',
+              },
+            }),
+          }}
+        />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QF9JCF23H"></script>
         <script
           dangerouslySetInnerHTML={{

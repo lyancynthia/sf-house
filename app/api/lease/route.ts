@@ -274,7 +274,7 @@ async function sendLeaseEmail(
     return;
   }
 
-  const adminEmail = process.env.HOTEL_ADMIN_EMAIL || '<a href="mailto:cynthiayluo11@gmail.com" class="hover:underline">cynthiayluo11@gmail.com</a>';
+  const adminEmail = process.env.HOTEL_ADMIN_EMAIL || 'cynthiayluo11@gmail.com';
 
   try {
     await resend.emails.send({

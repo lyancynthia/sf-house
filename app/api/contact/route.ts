@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
 
     // Send email notification
     if (resend) {
-      const adminEmail = process.env.HOTEL_ADMIN_EMAIL || '<a href="mailto:cynthiayluo11@gmail.com" class="hover:underline">cynthiayluo11@gmail.com</a>';
+      const adminEmail = process.env.HOTEL_ADMIN_EMAIL || 'cynthiayluo11@gmail.com';
       const typeLabel = data.type === 'tour' ? '看房预约' : '普通咨询';
 
       await resend.emails.send({
@@ -130,7 +130,7 @@ export async function POST(req: NextRequest) {
               <p style="color: #6B7280; font-size: 13px;">
                 <strong>联系方式：</strong><br />
                 邮箱：${adminEmail}<br />
-                网站：${process.env.NEXT_PUBLIC_SITE_URL || 'https://sfaffordableshortterm.com'}
+                网站：${process.env.NEXT_PUBLIC_SITE_URL || 'https://sf-affordable-rentals.vercel.app'}
               </p>
             </div>
             <div style="text-align: center; padding: 16px; color: #9CA3AF; font-size: 12px;">
