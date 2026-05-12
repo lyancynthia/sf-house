@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'FAQ | SF Affordable Short Term Rentals',
   description:
-    'Frequently asked questions about renting a private room in San Francisco. Covers pricing, deposits, move-in process, amenities, and payment methods.',
+    'Frequently asked questions about renting a private room in San Francisco. Covers pricing ($1,350-$1,850/mo), deposits, move-in process, amenities, payment methods, and cancellation policy.',
   keywords: [
     'sf monthly rental faq',
     'san francisco short term housing questions',
@@ -14,12 +14,24 @@ export const metadata: Metadata = {
     'short term rental sf deposit',
     'san francisco temp housing faq',
     'sf new grad housing',
+    'sf housing questions answers',
+    'san francisco monthly sublet faq',
+    'hotel room sf questions',
+    'powell bart housing faq',
   ],
   openGraph: {
     title: 'FAQ | SF Affordable Short Term Rentals',
-    description: 'Common questions about renting a private hotel room in SF, answered.',
+    description: 'Common questions about renting a private hotel room in SF, answered. Pricing, deposits, amenities.',
     url: 'https://sf-affordable-rentals.vercel.app/faq',
     type: 'website',
+        images: [
+      {
+        url: '/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'FAQ - SF Affordable Short Term Rentals',
+      },
+    ],
   },
 };
 
@@ -126,6 +138,25 @@ export default function FAQPage() {
     },
   };
 
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://sf-affordable-rentals.vercel.app',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'FAQ',
+        item: 'https://sf-affordable-rentals.vercel.app/faq',
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -135,6 +166,10 @@ export default function FAQPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <div className="min-h-screen bg-background">
         {/* Header */}

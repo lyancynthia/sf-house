@@ -343,7 +343,7 @@ export default function PropertyListings() {
           {lightboxType === 'image' ? (
             <img
               src={lightboxImages[lightboxIndex]}
-              alt=""
+              alt={`Room photo ${lightboxIndex + 1} of ${lightboxImages.length} — San Francisco hotel room`}
               className="max-w-[90vw] max-h-[90vh] object-contain"
               onClick={(e) => e.stopPropagation()}
             />
